@@ -18,7 +18,7 @@ function userMessage() {
   let newDiv = document.createElement("div");
   let text = document.createTextNode(msg);
   newDiv.appendChild(text);
-  newDiv.classList.add("message", "message-personal", "new");
+  newDiv.classList.add("message", "message-user", "new");
   // console.log(newDiv)
   // console.log(document.querySelectorAll('.messages-content'))
 
@@ -52,7 +52,7 @@ function botMessage(says) {
   let newDiv = document.createElement("div");
   let text = document.createTextNode(says);
   newDiv.appendChild(text);
-  newDiv.classList.add("message", "new");
+  newDiv.classList.add("message", "message-bot", "new");
 
   content.appendChild(loadDiv);
   updateScroll();
