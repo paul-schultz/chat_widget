@@ -1,18 +1,30 @@
-.messages {
+body {
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.overflow {
     width: 250px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 10px;
     margin: auto;
     margin-top: 100px;
-    background-color: #222;
-    border-radius: 10px;
+}
+
+.messages {    
+    width: 250px;
+    background-color: rgb(56, 56, 56);
+    box-shadow: 20px 20px 50px 20px #222 inset;  
 }
 
 .messages-header {
+    height: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    color: white;
+    background-color: #222;
 }
 
 .messages-header p {
@@ -33,7 +45,6 @@
 
 .message {
     width: 80%;
-    color: white;
     border-radius: 5px;
     margin: 5px;
     padding: .2em;
@@ -43,22 +54,65 @@
     float: left;
     text-align: center;
     background-color: rgb(92, 92, 92);
+    border-radius: 5px 20px 5px;
 }
 
 .message-user {
     float: right;
     text-align: center;
     background-color: #5956f7;
+    border-radius: 20px 5px 20px;
+
 }
 
 .user-input {
+    height: 60px;
     padding: .3em;
+    background-color: #222;
 }
 
+input[type="text"] {
+    background-color: rgb(92, 92, 92);
+    border-radius: 20px;
+    outline: none;
+    color: white;
+    border: none;
+    padding: .3em;
+    margin: .3em;
+    transition: background-color .5s ease-in;
+}
+
+input[type="text"]::placeholder {
+    color: inherit;
+}
+
+input[type="text"]:focus {
+    background-color: #5956f7;
+}
+
+button[type="submit"] {
+    background-color: #ffffff00;
+    border: none;
+    color: inherit;
+    font: inherit;
+    transition: color .1s ease-in;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    color: #c0c0c0;
+}
+
+button[type="submit"]:focus {
+    cursor: pointer;
+    color: #5956f7;
+    outline: none;
+}
+ 
 /* Scrollbar styling */
 /* width */
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
 }
   
 /* Track */

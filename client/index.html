@@ -7,17 +7,32 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="messages" >
-            <div class="messages-header">
-                <div><p>Chat with us!</p></div>
-                <div><a href="#">X</a></div>
+        <div class="overflow">
+            <div class="messages" >
+                <div class="messages-header">
+                    <div><p>Chat with us!</p></div>
+                    <div><a href="#">X</a></div>
+                </div>
+                <div class="messages-content" id="mc">
+                </div>
+                <form class="user-input" 
+                      id="user-input" 
+                      method="POST"
+                >
+                    <input type="text" 
+                           id="userMsg" 
+                           name="userMsg" 
+                           class="message-input" 
+                           placeholder="Type message..." 
+                           autocomplete="off"
+                    >
+                    <button type="submit" 
+                            class="message-submit"
+                    >
+                    Send
+                    </button>
+                </form>
             </div>
-            <div class="messages-content" id="mc">
-            </div>
-            <form class="user-input" id="user-input" method="POST">
-                <input type="text" id="userMsg" name="userMsg" class="message-input" placeholder="Type message..." >
-                <button type="submit" class="message-submit">Send</button>
-            </form>
         </div>
         <script src="js/app.js"></script>
     </body>
