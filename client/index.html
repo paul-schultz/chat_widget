@@ -7,11 +7,14 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <div class="overflow">
+        <div class="chat-button" >   
+            <a href="#" class="show" id="load-chat">CHAT</a>
+        </div>
+        <div class="message-container overflow hide-smooth" id="chat-window">
             <div class="messages" >
                 <div class="messages-header">
                     <div><p>Chat with us!</p></div>
-                    <div><a href="#">X</a></div>
+                    <div><a href="#" id="hide-chat">X</a></div>
                 </div>
                 <div class="messages-content" id="mc">
                 </div>
@@ -35,6 +38,8 @@
             </div>
         </div>
         <script src="js/app.js"></script>
+        <script src="js/dom.js"></script>
     </body>
 </html>
+
 

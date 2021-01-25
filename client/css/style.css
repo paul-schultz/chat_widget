@@ -3,17 +3,56 @@ body {
     color: white;
 }
 
-.overflow {
-    width: 250px;
-    height: 380px;
-    overflow: hidden;
-    border-radius: 10px;
+.hide-smooth, .hide {
+    opacity: 0;
+}
+
+.show-smooth, .show {
+    opacity: 1;
+}
+
+.hide-smooth, .show-smooth {
+    transition: opacity .5s ease-in;
+}
+
+.chat-button a {
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.chat-button a:hover {
+    text-decoration: underline;
+}
+
+.message-container,
+.chat-button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
+
+.message-container,
+.messages,
+.messages-content {
+    width: 320px;
+}
+
+.message-container {
+    /* border: 1px solid red;     */
+    height: 500px;
     margin: auto;
     margin-top: 100px;
 }
 
+.overflow {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
 .messages {    
-    width: 250px;
     background-color: rgb(56, 56, 56);
     box-shadow: 20px 20px 50px 20px #222 inset;  
 }
@@ -38,8 +77,7 @@ body {
 }
 
 .messages-content {
-    height: 300px; 
-    width: 250px; 
+    height: 420px; 
     overflow: auto;
 }
 

@@ -1,3 +1,5 @@
+// Handles chatbot functionality
+
 // Load greeting message
 window.onload = (event) => {
   botMessage("Hi!, I'm ATCQ Brewing's FAQ chatbot. What can I help you with?");
