@@ -1,10 +1,4 @@
-// Handles chatbot functionality
-
-// Load greeting message
-window.onload = (event) => {
-  botMessage("Hi!, I'm ATCQ Brewing's FAQ chatbot. What can I help you with?");
-};
-
+// HANDLE CHATBOT FUNCTIONALITY
 function updateScroll() {
   var objDiv = document.getElementById("mc");
   objDiv.scrollTop = objDiv.scrollHeight;
@@ -35,6 +29,7 @@ document.getElementById("user-input").onsubmit = (e) => {
   userMessage();
 };
 
+
 // Insert botMessage after response is received
 function botMessage(says) {
   let content = document.querySelector(".messages-content");
@@ -64,6 +59,7 @@ function botMessage(says) {
   updateScroll();
 }
 
+
 function fetchBotMsg() {
   var url = "http://localhost:5000/send-msg";
 
@@ -84,3 +80,27 @@ function fetchBotMsg() {
     })
     .catch((error) => console.error("Error h:", error));
 }
+
+// HANDLE DOM RENDERING
+let chatWindow = document.getElementById('chat-window');
+let loadChat = document.getElementById('load-chat');
+let hideChat = document.getElementById('hide-chat');
+let session = 0;
+
+loadChat.addEventListener('click', function() {
+    session += 1;    
+    if (session == 1) {
+        botMessage("Hi!, I'm ATCQ Brewing's FAQ chatbot. What can I help you with?");
+    }
+    chatWindow.classList.remove('hide');
+    chatWindow.classList.add('show-smooth');
+    loadChat.classList.remove('show');
+    loadChat.classList.add('hide');
+})
+
+hideChat.addEventListener('click', function() {
+    chatWindow.classList.remove('show-smooth');
+    chatWindow.classList.add('hide-smooth');
+    loadChat.classList.remove('hide');
+    loadChat.classList.add('show');
+})
