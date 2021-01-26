@@ -61,6 +61,7 @@ function botMessage(says) {
 
 
 function fetchBotMsg() {
+  console.log(window.location.href)
   var url = "http://localhost:5000/send-msg";
 
   const data = new URLSearchParams();
@@ -94,13 +95,13 @@ loadChat.addEventListener('click', function() {
     }
     chatWindow.classList.remove('hide');
     chatWindow.classList.add('show-smooth');
-    loadChat.classList.remove('show');
-    loadChat.classList.add('hide');
+    loadChat.classList.remove('show-smooth');
+    loadChat.classList.add('hide-smooth');
 })
 
 hideChat.addEventListener('click', function() {
     chatWindow.classList.remove('show-smooth');
     chatWindow.classList.add('hide-smooth');
-    loadChat.classList.remove('hide');
-    loadChat.classList.add('show');
+    loadChat.classList.remove('hide-smooth');
+    loadChat.classList.add('show-smooth');
 })
