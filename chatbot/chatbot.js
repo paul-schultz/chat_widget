@@ -3,7 +3,7 @@ const dialogflow = require('dialogflow');
 const uuid = require('uuid');
 const config = require('../config/keys');
 
-const projectID = config.googleProjectID;
+const projectId = config.googleProjectId;
 const sessionId = uuid.v4();   
 const languageCode = config.dialogFlowSessionLanguageCode;
 
@@ -12,7 +12,7 @@ const credentials = {
     private_key: config.googlePrivateKey
 }
 
-const sessionClient = new dialogflow.SessionsClient({ projectID, credentials});
+const sessionClient = new dialogflow.SessionsClient({ projectId, credentials});
 
 module.exports = {
     textQuery: async function( userMsg, parameters ) { 
