@@ -1,4 +1,3 @@
-node_modules
-keys
-client
-# knowledge
+/node_modules
+/keys
+knowledge
