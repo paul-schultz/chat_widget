@@ -61,7 +61,7 @@ function botMessage(says) {
 
 
 function fetchBotMsg() {
-  var url = "http://localhost:5000/send-msg";
+  var url = "https://faq-server-303017.wl.r.appspot.com/send-msg";
 
   const data = new URLSearchParams();
   for (const query of new FormData(document.getElementById("user-input"))) {
