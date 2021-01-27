@@ -1,15 +1,18 @@
 'use strict'
 const dialogflow = require('dialogflow');
 const uuid = require('uuid');
+const config = require('../config/keys');
 
-const projectId = 'faq-bot-lqsg'
+const projectID = config.googleProjectID;
 const sessionId = uuid.v4();   
-const languageCode = 'en-US'
+const languageCode = config.dialogFlowSessionLanguageCode;
 
-const sessionClient = new dialogflow.SessionsClient({
-    keyFilename: "C:/Users/icepi/github/chat_widget/keys/faq-bot-lqsg-0338b445bc95.json"
-});
+const credentials = {
+    client_email: config.googleClientEmail,
+    private_key: config.googlePrivateKey
+}
 
+const sessionClient = new dialogflow.SessionsClient({ projectID, credentials});
 
 module.exports = {
     textQuery: async function( userMsg, parameters ) { 

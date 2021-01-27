@@ -1,3 +1,5 @@
 node_modules
 keys
 knowledge
+client
+config/dev.js
