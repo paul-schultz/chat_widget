@@ -61,7 +61,6 @@ function botMessage(says) {
 
 
 function fetchBotMsg() {
-  console.log(window.location.href)
   var url = "http://localhost:5000/send-msg";
 
   const data = new URLSearchParams();
